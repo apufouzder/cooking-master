@@ -1,0 +1,11 @@
+body {
+    background: #edd263;
+}
+.custom-input {
+    width: 500px;
+    display: inline;
+}
+
+#singleMealDetails img{
+    width: 300px;
+}
