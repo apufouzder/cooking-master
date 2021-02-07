@@ -20,10 +20,18 @@ const mealsResult = () => {
             </div>
         `;
         document.getElementById("singleMealDetails").style.display = "none";
+        
         })
+        // if condition for '' search 
+        if(searchName === ""){
+            alert('nothing value');
+            document.getElementById("search-result").style.display = "none";
+        }
 
     // Display search result function
     const displaySearchResult = meals => {
+        
+
         // added forEach loop
         meals.forEach(mealNam => {
             //template strings added
