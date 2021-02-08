@@ -24,14 +24,13 @@ const mealsResult = () => {
         })
         // if condition for '' search 
         if(searchName === ""){
-            alert('nothing value');
+            alert('Please reload page Enter name and Try again.');
             document.getElementById("search-result").style.display = "none";
+            singleMealDetails.style.display = "none";
         }
 
     // Display search result function
     const displaySearchResult = meals => {
-        
-
         // added forEach loop
         meals.forEach(mealNam => {
             //template strings added
@@ -56,7 +55,7 @@ document.getElementById("search-btn").addEventListener("click", mealsResult);
 // single meals info function
 const renderMealsInfo = (mealNam, mealNam2, mealNam3, mealNam4, mealNam5, mealNam6, mealNam7, mealNam8, mealNam9, mealNam10, mealNam11, mealNam12) => {
     const singleMealDetails = document.getElementById("singleMealDetails");
-    //singleMealDetails.style.display = "block";
+    singleMealDetails.style.display = "block";
     singleMealDetails.innerHTML = `
         <img class="card-img-top pb-3" src="${mealNam}" alt="">
         <h3 id="" class="card-title pl-4">${mealNam2}</h3>
@@ -72,4 +71,5 @@ const renderMealsInfo = (mealNam, mealNam2, mealNam3, mealNam4, mealNam5, mealNa
         <p class="pl-4 pb-4"> <span class="icon"><i class="fas fa-check"></i></span> ${mealNam12}</p>
     `;
 }
+
 
