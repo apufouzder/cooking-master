@@ -35,7 +35,7 @@ const mealsResult = () => {
         meals.forEach(mealNam => {
             //template strings added
             document.getElementById("search-result").innerHTML += `
-                <div class="col-md-3 custom-css text-center" onclick="renderMealsInfo('${mealNam.strMealThumb}', '${mealNam.strCategory}', '${mealNam.strIngredient1}', '${mealNam.strIngredient2}', '${mealNam.strIngredient3}', '${mealNam.strIngredient4}', '${mealNam.strIngredient5}', '${mealNam.strIngredient6}', '${mealNam.strIngredient7}', '${mealNam.strIngredient8}', '${mealNam.strIngredient9}', '${mealNam.strIngredient10}')">
+                <div class="col-md-3 custom-css text-center" onclick="renderMealsInfo('${mealNam.strMealThumb}', '${mealNam.strMeal}', '${mealNam.strCategory}', '${mealNam.strIngredient1}', '${mealNam.strIngredient2}', '${mealNam.strIngredient3}', '${mealNam.strIngredient4}', '${mealNam.strIngredient5}', '${mealNam.strIngredient6}')">
                     <div class="card h-100">
                         <img class="card-img-top" src="${mealNam.strMealThumb}" alt="">
                         <div class="card-body">
@@ -53,7 +53,7 @@ const mealsResult = () => {
 document.getElementById("search-btn").addEventListener("click", mealsResult);
 
 // single meals info function
-const renderMealsInfo = (mealNam, mealNam2, mealNam3, mealNam4, mealNam5, mealNam6, mealNam7, mealNam8, mealNam9, mealNam10, mealNam11, mealNam12) => {
+const renderMealsInfo = (mealNam, mealNam2, mealNam3, mealNam4, mealNam5, mealNam6, mealNam7, mealNam8, mealNam9) => {
     const singleMealDetails = document.getElementById("singleMealDetails");
     singleMealDetails.style.display = "block";
     singleMealDetails.innerHTML = `
@@ -65,10 +65,7 @@ const renderMealsInfo = (mealNam, mealNam2, mealNam3, mealNam4, mealNam5, mealNa
         <p class="pl-4"> <span class="icon"><i class="fas fa-check"></i></span> ${mealNam6}</p>
         <p class="pl-4"> <span class="icon"><i class="fas fa-check"></i></span> ${mealNam7}</p>
         <p class="pl-4"> <span class="icon"><i class="fas fa-check"></i></span> ${mealNam8}</p>
-        <p class="pl-4"> <span class="icon"><i class="fas fa-check"></i></span> ${mealNam9}</p>
-        <p class="pl-4"> <span class="icon"><i class="fas fa-check"></i></span> ${mealNam10}</p>
-        <p class="pl-4"> <span class="icon"><i class="fas fa-check"></i></span> ${mealNam11}</p>
-        <p class="pl-4 pb-4"> <span class="icon"><i class="fas fa-check"></i></span> ${mealNam12}</p>
+        <p class="pl-4 pb-4"> <span class="icon"><i class="fas fa-check"></i></span> ${mealNam9}</p>
     `;
 }
 
